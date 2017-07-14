@@ -1,6 +1,19 @@
 # Side project challenge
 
-Many good programmers have side projects that they work on for fun or to learn.  This weekend is a chance to work on your own side project.  You'll build something of your own choosing!
+## User stories
+
+```
+As a user:
+
+So that I can share my craft projects with others,
+I want to be able to add a craft project to the database.
+
+So that I can see what projects I can make with the materials I have,
+I want to be able to input my materials to filter projects.
+
+So that I can make different things,
+I want to be able to view craft project suggestions.
+```
 
 ## Instructions
 
