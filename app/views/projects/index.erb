@@ -1,0 +1,11 @@
+<h1> Projects </h1>
+
+<ul id='projects'>
+  <% @projects.each do |project| %>
+  <li>
+    <%= project.title %>
+    <%= project.materials %>
+    <%= project.instructions %>
+  </li>
+  <% end %>
+</ul>
