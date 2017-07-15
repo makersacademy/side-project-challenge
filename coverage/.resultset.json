@@ -6,6 +6,13 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/search_spec.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -26,6 +33,6 @@
         null
       ]
     },
-    "timestamp": 1500129970
+    "timestamp": 1500153244
   }
 }
