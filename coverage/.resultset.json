@@ -1,6 +1,18 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/creating_projects_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/viewing_projects_spec.rb": [
         1,
         1,
@@ -14,6 +26,6 @@
         null
       ]
     },
-    "timestamp": 1500118497
+    "timestamp": 1500129970
   }
 }

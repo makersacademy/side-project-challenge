@@ -13,6 +13,9 @@ I want to be able to input my materials to filter projects.
 
 So that I can make different things,
 I want to be able to view craft project suggestions.
+
+So that I can see new projects added,
+I want to see all projects in reverse chronological order. 
 ```
 
 ## Instructions
