@@ -1,9 +1,5 @@
 <h1> Projects </h1>
 
-<form action='/' method='get'>
-  <input type='submit' value='Search projects' />
-</form>
-
 <ul id='projects'>
   <% @projects.each do |project| %>
   <li>
@@ -13,3 +9,17 @@
   </li>
   <% end %>
 </ul>
+
+<style>
+
+h1 {
+  text-align: center;
+  color: green;
+  font-size: 40px;
+}
+
+#projects {
+  font-size: 30px;
+}
+
+</style>

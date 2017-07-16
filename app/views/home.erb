@@ -1,15 +1,30 @@
-<h1> Super Crafts! </h1>
-<h2> Enter your materials and see what you can make: </h2>
-<form action='/search' method='post'>
-  <input type='text' name='material_1' />
-  <input type='text' name='material_2' />
-  <input type='submit' value='Search'/>
-</form>
+<body>
+  <h1> Welcome to Super Crafts! </h1>
+  <h2> Enter your materials and see what you can make: </h2>
+  <form action='/search' method='post'>
+    <div class="form-group">
+      <input type='text' class="form-control" name='material_1' />
+      <input type='text' class="form-control" name='material_2' />
+      <input type='submit' value='Search'/>
+    </form>
+  </body>
 
-<form action='/projects/new' method='get'>
-  <input type='submit' value='Add project' />
-</form>
+  <style>
+  h1 {
+    text-align: center;
+    color: green;
+    font-size: 50px;
+  }
 
-<form action='/projects' method='get'>
-  <input type='submit' value='See all projects' />
-</form>
+  h2 {
+    text-align: center;
+  }
+
+  body {
+    background-image: url("./images/supercrafts_background.jpg");
+    background-size: 100% 100%;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+  }
+
+  </style>
