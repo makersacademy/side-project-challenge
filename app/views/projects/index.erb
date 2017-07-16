@@ -1,0 +1,24 @@
+<h1> Projects </h1>
+
+<ul id='projects'>
+  <% @projects.each do |project| %>
+  <li>
+    <a href="/projects/<%= project.id %>", name='id'>
+      <%= project.title %>
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<style>
+
+h1 {
+  color: #696969;
+  font-size: 40px;
+}
+
+#projects {
+  font-size: 30px;
+}
+
+</style>

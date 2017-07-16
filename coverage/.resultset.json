@@ -1,0 +1,64 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/creating_projects_spec.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/search_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Simon/Projects/weekend_challenges/side-project-challenge/spec/features/viewing_projects_spec.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1500227438
+  }
+}
