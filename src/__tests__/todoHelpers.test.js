@@ -14,7 +14,7 @@ describe('addTodo', () => {
     ]
     const result = addTodo(startTodos, newTodo)
 
-    expect(result).not.toBe(startTodos)
+    expect(result).toEqual(expected)
   })
 })
 
