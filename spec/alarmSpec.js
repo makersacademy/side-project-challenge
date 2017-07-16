@@ -4,6 +4,7 @@ describe("Alarm", function () {
 
   beforeEach(function() {
     alarm = new Alarm(10, 20);
+    jasmine.clock().install;
   });
 
   it("initializes a new date", function () {
@@ -26,5 +27,17 @@ describe("Alarm", function () {
 
   it("checks that the time entered by the user is valid", function () {
     expect(alarm.isValid()).toEqual(true);
+  });
+
+  it("checks whether time entered is equal to current time", function () {
+    var baseTime = new Date(2017, 7, 16, 10, 20);
+    jasmine.clock().mockDate(baseTime);
+    expect(alarm.isEqual()).toBe(true);
+  });
+
+  
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
   });
 });
