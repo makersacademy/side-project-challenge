@@ -11,7 +11,11 @@ As a latecomer
 So that I wake up at that specific time
 I want an alarm to go off
 
-As a user
+As a latecomer
 So that I know I woke up at the right time
 I want to be able to see the time
+
+As a latecomer
+So that I can sleep a bit more
+I want to be able to disable the alarm
 ```
