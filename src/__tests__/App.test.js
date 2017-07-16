@@ -11,21 +11,21 @@ describe('<App />', () => {
 
   it('has 3 todos saved in state upon loading', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.state().todos.length).toEqual(3)
+    expect(wrapper.state().todos.length).toEqual(1)
   });
   describe('todo', () => {
     it('should have a name', () => {
       const wrapper = shallow(<App />);
-      expect(wrapper.state().todos[0].name).toEqual('Learn JSX')
+      expect(wrapper.state().todos[0].name).toEqual('Learn react')
     })
   })
-  xdescribe('entering text to form', () => {
-    it('should update the currentTodo state with its value', () => {
+  describe('entering a new todo', () => {
+    it('should add the todo to the list', () => {
       const wrapper = shallow(<App />);
       const form = wrapper.find('.todo-form');
       const event = {target: {value: 'test'}};
-      form.simulate('change', event);
-      expect(wrapper.state().currentTodo).toEqual('test')
+      form.simulate('submit', event);
+      expect(wrapper.state().todos.length).toEqual(2)
     })
   })
 });
