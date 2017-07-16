@@ -14,8 +14,11 @@ Alarm.prototype.isValid = function () {
   && this.min < 60;
 };
 
-Alarm.prototype.isEqual = function () {
+Alarm.prototype.isTimeToSoundAlarm = function () {
   dateNow = new Date();
   return dateNow.getMinutes() === this.date.getMinutes()
          && dateNow.getHours() === this.date.getHours();
+}
+Alarm.prototype.soundAlarm = function() {
+  console.log("Riiiiiiing");
 }

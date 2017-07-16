@@ -32,10 +32,14 @@ describe("Alarm", function () {
   it("checks whether time entered is equal to current time", function () {
     var baseTime = new Date(2017, 7, 16, 10, 20);
     jasmine.clock().mockDate(baseTime);
-    expect(alarm.isEqual()).toBe(true);
+    expect(alarm.isTimeToSoundAlarm()).toBe(true);
   });
 
-  
+  it("makes the alarm sound", function () {
+    spyOn(console, "log");
+    alarm.soundAlarm();
+    expect(console.log).toHaveBeenCalledWith("Riiiiiiing");
+  });
 
   afterEach(function() {
     jasmine.clock().uninstall();
