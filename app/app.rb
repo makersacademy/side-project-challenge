@@ -20,11 +20,12 @@ class SuperCrafts < Sinatra::Base
   end
 
   post '/projects' do
-    Project.create(title: params[:title],
-    materials: params[:materials],
+    project = Project.create(title: params[:title],
+    material_1: params[:material_1],
+    material_2: params[:material_2],
     instructions: params[:instructions],
     image_URL: params[:image_URL],
-    author: params[:author],)
+    author: params[:author])
     redirect '/projects'
   end
 
@@ -34,11 +35,20 @@ class SuperCrafts < Sinatra::Base
   end
 
   post '/search' do
-    redirect "/search/#{CGI::escape(params[:materials])}"
+    if !params[:material_2]
+      redirect "/search/#{CGI::escape(params[:material_1])}"
+    else
+      redirect "/search/#{CGI::escape(params[:material_1])}&#{CGI::escape(params[:material_2])}"
+    end
   end
 
-  get '/search/:materials' do
-    @projects = Project.all(materials: params[:materials])
+  get '/search/:material_1&:material_2' do
+    @projects = Project.all(material_1: params[:material_1], material_2: params[:material_2])
+    erb :'projects/index'
+  end
+
+  get '/search/:material_1&' do
+    @projects = Project.all(material_1: params[:material_1], :material_2 => '')
     erb :'projects/index'
   end
 
