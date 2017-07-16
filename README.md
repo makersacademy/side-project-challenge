@@ -1,6 +1,6 @@
 # Side project challenge
 
-Super Crafts! 
+# Super Crafts! 
 https://super-crafts.herokuapp.com/
 
 ## User stories
