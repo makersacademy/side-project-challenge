@@ -1,0 +1,10 @@
+<% if @tweets %>
+  <% @tweets.each do |tweet| %>
+  <div>
+    <%= tweet.user.screen_name %> : <%= tweet.text %>
+  </div>
+  <% end %>
+  <% end %>
+  
+  <a href="/search/analysis">Analyze</a>
+  
