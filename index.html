@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stupid Alarm</title>
+    <script src="src/alarm.js"></script>
+    <script src='jquery.js'></script>
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time_now').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+
+      $(document).ready(function() {
+        console.log("Document ready");
+        var alarm = new Alarm(8,20);
+        console.log(alarm);
+
+        setInterval(function(alarm) {
+          if (alarm.isTimeToSoundAlarm()
+                  && alarm.alarmSwitch) {
+            alarm.soundAlarm();
+          }
+        }, 1000);
+
+        $('#alarm_switch_on').click(function() {
+          alarm.turnOn();
+          $('#alarm_switch').text('ON')
+        });
+
+        $('#alarm_switch_off').click(function() {
+          alarm.turnOff();
+          $('#alarm_switch').text('OFF')
+        });
+      });
+
+    </script>
+  </head>
+  <body onload="startTime()">
+    <section>
+      <div id="time_now"></div>
+      <form id="set_alarm">
+        Set the alarm:
+        <input type="time" name="time" id="time">
+        <input type="submit">
+      </form>
+      <p>
+        The alarm is <span id="alarm_switch"></span>
+        <button id="alarm_switch_on">ON</button>
+        <button id="alarm_switch_off">OFF</button>
+      </p>
+    </section>
+  </body>
+</html>
