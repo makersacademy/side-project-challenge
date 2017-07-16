@@ -1,6 +1,9 @@
 feature 'Searching projects' do
-  scenario 'User can search projects by materials' do
+  before(:each) do
     create_project
+  end
+
+  scenario 'User can search projects by materials' do
     visit '/'
     fill_in 'materials', with: 'paper'
     click_button 'Search'

@@ -7,9 +7,9 @@
 <ul id='projects'>
   <% @projects.each do |project| %>
   <li>
-    <%= project.title %>
-    <%= project.materials %>
-    <%= project.instructions %>
+    <a href="/projects/<%= project.id %>", name='id'>
+      <%= project.title %>
+    </a>
   </li>
   <% end %>
 </ul>

@@ -22,8 +22,15 @@ class SuperCrafts < Sinatra::Base
   post '/projects' do
     Project.create(title: params[:title],
     materials: params[:materials],
-    instructions: params[:instructions])
+    instructions: params[:instructions],
+    image_URL: params[:image_URL],
+    author: params[:author],)
     redirect '/projects'
+  end
+
+  get "/projects/:project_id" do
+    @project = Project.first(id: params[:project_id])
+    erb :'projects/project'
   end
 
   post '/search' do
