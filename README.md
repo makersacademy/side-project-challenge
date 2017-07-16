@@ -1,5 +1,3 @@
-# Side project challenge
-
 # Super Crafts! 
 https://super-crafts.herokuapp.com/
 
