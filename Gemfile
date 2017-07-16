@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'sinatra-flash'
 gem 'sinatra-partial'
 gem 'thin'
+gem 'twitter'
 
 group :test do
   gem 'capybara'
