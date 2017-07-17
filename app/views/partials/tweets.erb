@@ -1,0 +1,44 @@
+
+<% if @tweets %>
+<div class="row">
+  <div class="col-md-8">
+    <h3>Tweets<h3>
+    </div>
+    <div class="col-md-4">
+      <% if @has_results %>
+      <h3>Results<h3>
+        <% end %>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <% @tweets.each do |tweet| %>
+    
+    <div class="row">
+      <div class="col-md-8 tweet" style="vertical-align:middle;">
+        <%= tweet[:text] %>
+      </div>
+      
+      <div class="col-md-4">
+        <% if tweet[:result] %>
+        <% tweet[:result].each do |key, value|%>
+        <% if value %>
+        <div>
+          <% if key == :Sentiment %>
+          <%= key %> :
+          <%= edit_score_tag(value) %>
+          <% else %>
+          <%= key %> :
+          <%= value.downcase.capitalize %>
+          <% end %>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+    <% end %>
+    <% end %>
+    
