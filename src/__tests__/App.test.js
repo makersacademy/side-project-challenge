@@ -9,7 +9,7 @@ describe('<App />', () => {
     expect(wrapper).toHaveLength(1)
   });
 
-  it('has 3 todos saved in state upon loading', () => {
+  it('has a todos saved in state upon loading', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.state().todos.length).toEqual(1)
   });
