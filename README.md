@@ -20,7 +20,8 @@ So I can understand the tone of tweets,
 I want to see the result of the tone analysis next to each tweet
 
 ## Built with
-The app uses ```sferik```, A Ruby interface to the Twitter API and Sentiment Analysis API from MeaningCloud. 
+Built using Ruby and Sinatra.
+The app uses ```sferik```, A Ruby interface to the Twitter API and Sentiment Analysis API from MeaningCloud.
 
 
 ## Installation
