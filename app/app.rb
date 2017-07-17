@@ -24,18 +24,16 @@ class SentimentAnalysis < Sinatra::Base
   get '/search/results' do
     @tweets = TwitterApi.search(session[:search])
     session[:tweets] = @tweets
+    @has_results = false
     erb :'/search/results'
   end
   
   get '/search/analysis' do
-    p "ceva"
-    p session[:tweets]
-    result = []
-    
-    session[:tweets].each do |tweet|
-      result << MeaningCloud.analyse(tweet[:text])
+    @tweets = session[:tweets]
+    @tweets.each do |tweet|
+      tweet[:result] = MeaningCloud.analyse(tweet[:text])
     end
-    p result
+    @has_results = true
     erb :'/search/analysis'
   end
   
@@ -52,9 +50,9 @@ class SentimentAnalysis < Sinatra::Base
       when "N"
         "Negative"
       when "N+"
-        "strong negative"
+        "Strong negative"
       when "NONE"
-        "without sentiment"
+        "Without sentiment"
       end
     end
     
