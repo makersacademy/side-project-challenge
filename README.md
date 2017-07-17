@@ -1,4 +1,4 @@
 
 # Side project challenge #
 
-Politweet allows you to keep track of politicians twitter feeds.
+Politweet allows you to keep track of politician's twitter feeds.
