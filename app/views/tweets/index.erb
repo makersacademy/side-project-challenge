@@ -1,0 +1,33 @@
+
+
+
+<div class="container">
+   <div class="col-md-12 text-center">
+      <h1> Politweets </h1>
+   </div>
+</div>
+<div class="container">
+   <div class="col-md-2">
+   </div>
+   <div class="col-md-8 text-center">
+      <% if @tweets.empty? %>
+      <%= flash[:error] %>
+      <% else %>
+      <h1> <%= @tweets.first.user.name %>  <img class="img-thumbnail" alt="Cinque Terre" width="150" height="100" src='https://twitter.com/<%=@tweets.first.user.screen_name%>/profile_image?size=original'/> </h1>
+      <article class="listing">
+         <div class="panel default">
+            <div class="panal body">
+               <% @tweets.each do |tweet| %>
+               <a href='https://twitter.com/statuses/<%= tweet.id %>'
+               <p>  <%= tweet.full_text %> </p>
+               </a>
+               <p>  <%= tweet.created_at %> </p>
+               <% end %>
+               <% end %>
+            </div>
+         </div>
+      </article>
+   </div>
+   <div class="col-md-2">
+   </div>
+</div>
