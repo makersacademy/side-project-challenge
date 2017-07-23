@@ -1,57 +1,93 @@
-# Side project challenge
+# Tamamon タマモン
 
-Many good programmers have side projects that they work on for fun or to learn.  This weekend is a chance to work on your own side project.  You'll build something of your own choosing!
+Task
+----
+A Tamagotchi-style app written in Javascript with jQuery.
 
-## Instructions
 
-* Challenge time: rest of the day and weekend, until Monday 9am.
-* Feel free to use google, your notes, books, etc. but work on your own.
-* If you have a partial solution, **still check in a partial solution**.
-* You must submit a pull request to this repo with your code by 9am Monday morning.
+Instructions/Installation guide
+-------------------------------
 
-## Setup
+```
+$ git clone git@github.com:mihobo/Tamamon.git
+$ cd Tamamon
+$ open SpecRunner.html
+```
 
-* Fork this repo, and clone to your local machine.
+User Stories
+------------
+```
+As a player
+So that I know how my pet is doing
+I want to be able to see my pet’s health
 
-## Choosing a project
+As a player
+When my pet is hungry
+I want to be able to feed my pet
 
-You can build whatever you want.
+As a player
+So that I can have fun with my pet
+I want to be able to play with my pet
 
-### Coming up with ideas
 
-Some possible ways of coming up with ideas:
+Bonus user story features:
 
-* Maybe build something that you'd like to use.
+As a player
+So that I can call my pet something
+I want to be able to give my pet a name
 
-* Maybe build something you've used before to learn how it works.
+As a player
+When my pet is tired
+I want to be able to let my pet sleep
 
-* Maybe build something that will involve solving a techncial challenge you're interested in.
+As a player
+So that I can nurse my pet when it gets sick
+I want to be able to heal my pet
 
-* Maybe pick from this list of [project suggestions](https://github.com/karan/Projects).
+As a player
+When my pet gets dirty
+I want to be able to clean my pet
+```
 
-### Guidelines for good projects
+Features
+--------
+* You can feed Tamamon
+* You can play with Tamamon
+* Tamamon bounces by default with a happy face
+* When fed, a feeding animation is shown
+* When played with, a play animation is shown
+* When full or tired, a shaking head animation is shown
+* Energy messages change depending on Tamamon's energy levels
+* Energy number changes in color depending on the number
+* Every 10 minutes, Tamamon's energy goes down by 2 (state is saved on local drive)
 
-* Make sure you'll be able to do a Minimum Viable Product in a weekend.  Often, the best learning projects have very small MVPs, but can be expanded in many directions.
+Screenshots(v.1.0)
+------------------
+Default energy for Tamamon is 10:
+![Imgur](http://i.imgur.com/rafbVxN.png)
 
-* You've only got two days, so it's probably best to use languages and frameworks you already know.
+When you feed Tamamon:
+![Imgur](http://i.imgur.com/w7ccqJh.png)
 
-* Make sure your project is something you can write tests for.
+When Tamamon is full of energy and you try to feed it:
+![Imgur](http://i.imgur.com/M6ZGagt.png)
 
-## Implementing your project
+When you play with Tamamon:
+![Imgur](http://i.imgur.com/G0IebTN.png)
 
-* Write user stories before starting.
+When Tamamon has no energy and you try to play with it:
+![Imgur](http://i.imgur.com/nD91Y9X.png)
 
-* Plan your MVP and implement that first.
+v(1.1) - Tamamon has been updated with a pixelated/8bit retro style look - screenshots coming soon.
 
-* TDD, of course.
 
-* Stick to the design/TDD/refactor loop.
+Web-link
+--------
+< website link to play Tamamon coming soon >
 
-* In code review we'll be hoping to see:
-  * All tests passing
-  * High [Test coverage](https://github.com/makersacademy/course/blob/master/pills/test_coverage.md) (>95% is good)
-  * The code is elegant: every class has a clear responsibility, methods are short etc.
+Additional Comments
+-------------------
+All Jasmine spec tests pass (100%)  
 
-## Monday
-
-We'll have our normal Monday morning code review.  You'll get into groups and review each other's code.  In the whole-cohort code review, some people will be randomly chosen to show their code on the projector.
+Bonus features still to be incorporated into the app.  
+Watch this space!
